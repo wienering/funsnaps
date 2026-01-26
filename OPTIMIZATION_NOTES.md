@@ -107,3 +107,4 @@ Consider adding:
 - [ ] Implement Content Security Policy (CSP)
 - [ ] Add security headers (X-Frame-Options, X-Content-Type-Options, etc.)
 
+
