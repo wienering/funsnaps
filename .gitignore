@@ -26,6 +26,9 @@ index_original.html
 contact_original.html
 pricing_original.html
 
+# Browser data (should not be committed)
+AppData/
+
 # Browser data (should never be in repo)
 AppData/
 Local/
@@ -38,5 +41,8 @@ __pycache__/
 # PowerShell scripts (extraction only)
 extract_assets.ps1
 extract_assets.py
+
+
+
 
 

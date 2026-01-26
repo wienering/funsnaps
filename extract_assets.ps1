@@ -200,3 +200,7 @@ $imageListFile = Join-Path $baseDir "image_urls.txt"
 $allImages.Keys | Sort-Object | Out-File -FilePath $imageListFile -Encoding UTF8
 Write-Host "Image URLs saved to: $imageListFile"
 
+
+
+
+
