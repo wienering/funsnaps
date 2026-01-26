@@ -26,6 +26,14 @@ index_original.html
 contact_original.html
 pricing_original.html
 
+# Browser data and system files
+AppData/
+Desktop/
+Documents/
+Downloads/
+*.dat
+*.ini
+
 # Browser data (should not be committed)
 AppData/
 
@@ -41,6 +49,7 @@ __pycache__/
 # PowerShell scripts (extraction only)
 extract_assets.ps1
 extract_assets.py
+
 
 
 
