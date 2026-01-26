@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about photo booth rentals in Toronto and GTA. Get answers about pricing, setup, features, and more from Fun Snaps Photo Booth Rental.">
+    <title>Photo Booth Rental FAQ | Fun Snaps Photo Booth Rental</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .faq-hero {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .faq-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .faq-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 1.5rem 2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .faq-question:hover {
+            background: var(--light);
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 2rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        .faq-question.active::after {
+            content: '−';
+        }
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-answer.active {
+            padding: 0 2rem 1.5rem 2rem;
+            max-height: 1000px;
+        }
+        .faq-answer p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+        .faq-section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <img src="assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.png" alt="Fun Snaps Photo Booth Rental" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a href="/faq.html" class="active">FAQ</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/contact.html#book" class="btn-primary">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQ Hero -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Photo Booth Rental FAQs</h1>
+            <p>Everything you need to know about renting a photo booth for your event</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="intro">
+        <div class="container">
+            <div class="faq-container">
+                <!-- Pricing & Packages -->
+                <div class="faq-section">
+                    <h2 class="faq-section-title">💰 Pricing & Packages</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">How much does it cost to rent a photo booth?</div>
+                        <div class="faq-answer">
+                            <p>Photo booth rental prices can vary but our pricing starts at $550 for 2 hours. Our packages range from $550 to $1000+ depending on the duration, features, and customization options you choose. All packages include a professional photo booth, instant prints, digital copies, props, and an on-site attendant.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What is included in a Fun Snaps rental package?</div>
+                        <div class="faq-answer">
+                            <p>All of our packages include setup and breakdown, a professional attendant, unlimited photo sessions during rental time, instant prints (2 copies per session), digital copies via email or text, a variety of props, customizable photo templates, and an online gallery. Premium packages can add custom backdrops, guest books, social sharing stations, and video messaging.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do you require a deposit to book a photo booth?</div>
+                        <div class="faq-answer">
+                            <p>Yes. A deposit secures your event date. The deposit amount varies depending on your package and is applied to the final balance, which is due before or on the event day. Contact us for specific deposit requirements for your event.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Are there any hidden fees for photo booth rentals?</div>
+                        <div class="faq-answer">
+                            <p>No. Our pricing is transparent with no hidden fees. Travel fees, if applicable, are discussed upfront during booking. Any venue-specific requirements, overtime, or customization fees are clearly communicated before you commit.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Is there a minimum rental time for photo booths?</div>
+                        <div class="faq-answer">
+                            <p>Yes. We have a 2-hour minimum rental to ensure proper setup, operation, and guest experience. Extra hours can be added to any package. Contact us for hourly rates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="faq-section">
+                    <h2 class="faq-section-title">🎯 How Photo Booths Work</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">How do photo booths work?</div>
+                        <div class="faq-answer">
+                            <p>Our photo booth works with the push of a button! Pick your props, press the start button and the countdown begins. No need to worry because our professional photo booth attendant is there to guide you through. Once you're done your photos the file is sent to the printer and the print is ready in about 10 seconds.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How many people can use the photo booth at once?</div>
+                        <div class="faq-answer">
+                            <p>For each photo booth picture session approximately 12 people can squeeze in at a time. Our open-air booths can accommodate even larger groups, making them perfect for corporate events and large celebrations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How many photos do we get?</div>
+                        <div class="faq-answer">
+                            <p>During your rental time you can take as many photos as possible! There is no limit to the number of photos or photo sessions. All photos are included in your package.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do we get prints?</div>
+                        <div class="faq-answer">
+                            <p>Absolutely! The photo booth prints out 2 copies, 2 by 6 inches, which is the photo booth industry standard (think retro style booths). If you would rather have a postcard style print, we offer that as well.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How long does it take to get prints?</div>
+                        <div class="faq-answer">
+                            <p>Once your photo session is completed the file is sent to the printer. That takes about 1 second. The printer then processes the file and begins printing, and that takes about 10 seconds. By the time the print is in your hand it is under 12 seconds total. The most common thing we hear after we hand someone their print is "Oh, wow… That was fast!"</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do we get the digital photo booth files?</div>
+                        <div class="faq-answer">
+                            <p>YES! We give you copies of every photo taken as well as the finished strip digital copy. All digital files are delivered via email or through our online gallery within 24-48 hours after your event.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can you send the photos to my guest's phone via text or SMS or email?</div>
+                        <div class="faq-answer">
+                            <p>Yes, our photo booth software offers your guest the opportunity to enter their phone number or email address to get a digital copy of the images instantly. This feature is available on our Premium and Deluxe packages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Setup & Logistics -->
+                <div class="faq-section">
+                    <h2 class="faq-section-title">🚚 Setup & Logistics</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">What time do you arrive, and how fast is the set up of the photo booth?</div>
+                        <div class="faq-answer">
+                            <p>Typically we arrive 1 hour prior to the agreed upon start time. This allows us time to find a spot for the photo booth to be set up, unload, and initialize the photo booth. We are set up in about 45 minutes. You never pay for setup or teardown of the equipment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How much room do you need?</div>
+                        <div class="faq-answer">
+                            <p>Ideally we have an area approximately 8×8 feet to be "comfortable". We can work with less space, or if you aren't using a backdrop it would be an even smaller footprint. Our compact booths can fit in spaces as small as 6×6 feet.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can you accommodate my venue?</div>
+                        <div class="faq-answer">
+                            <p>99% of the time we are able to accommodate your chosen venue. Our photo booth takes up just a small footprint, approximately 8×8 feet, including the backdrop. If you opt to use a natural backdrop then our footprint will be even smaller!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Does the venue need to provide anything?</div>
+                        <div class="faq-answer">
+                            <p>All we need is a 6 foot table, if it's available. If the venue is unable to provide one we can make arrangements, but advanced notice would be appreciated. We also need access to a standard electrical outlet.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do photo booths work without WiFi?</div>
+                        <div class="faq-answer">
+                            <p>Yes. Core functions such as capture and printing work without WiFi. WiFi enables live sharing and uploads. Mobile hotspots or post event uploads are available if the venue lacks WiFi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services & Features -->
+                <div class="faq-section">
+                    <h2 class="faq-section-title">✨ Services & Features</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Do you provide props?</div>
+                        <div class="faq-answer">
+                            <p>We bring props for every event (unless you tell us you don't want them). We bring an assortment of various props that are in service. They change out as they go missing, break, or just need to be changed. Additionally, if you would like to bring some specific props you are more than welcome to!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What about the custom templates?</div>
+                        <div class="faq-answer">
+                            <p>Each event has a custom made template. We design them in house 1-2 weeks before your event. If you have a special logo (like from a wedding invite) or a colour scheme in mind, let us know and we can incorporate that into the template. Once we create the first draft we will send you a copy to review at which point you can let us know what you think. Sometimes we nail it on the first shot, others we will have to go back and make some adjustments. Once you're happy with the final product, we upload it to the photo booth for your day!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Where can I find my photo booth pictures?</div>
+                        <div class="faq-answer">
+                            <p>We will send you an email with access to the images a day or two after your event. You can share the images with friends and family through our online gallery!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Does someone come with the rental?</div>
+                        <div class="faq-answer">
+                            <p>Yes. All of our rentals come with an attendant. The attendant is there to interact with your guests, make sure they're having a good time, using the photo booth correctly, and taking their prints with them. They perform all the set up and take down of the photo booth and can tend to any issues that may crop up.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do you have insurance?</div>
+                        <div class="faq-answer">
+                            <p>Yes! We are a professional, legitimate company and we have liability insurance. We can provide a copy of our insurance policy slip to your venue upon request.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking -->
+                <div class="faq-section">
+                    <h2 class="faq-section-title">📅 Booking</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">How long before my event should I book the photo booth?</div>
+                        <div class="faq-answer">
+                            <p>Photo booths are quite popular and we have a fixed number of weekends in any given year, so ideally you book as early as you can. We currently offer multiple photo booths which means we can often accommodate a "last minute" booking. With that said, we still need to create a template for you and that can take some time. So in short, book as early as you can, but even if it's last minute, give us a call!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do you offer last minute photo booth rentals in Toronto?</div>
+                        <div class="faq-answer">
+                            <p>Yes. Bookings with 24 to 48 hours notice are sometimes possible, subject to availability. Customization options may be limited for last-minute bookings. Rush delivery fees can apply for very short notice.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Rent -->
+                <div class="faq-section">
+                    <h2 class="faq-section-title">💡 Why Rent a Photo Booth</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Why should I rent a photo booth?</div>
+                        <div class="faq-answer">
+                            <p>Having a photo booth at your event provides a ton of fun and entertainment which is customized for your guests and it also preserves your memories in a candid way! Photo booths are perfect for weddings, corporate events, birthday parties, and any celebration where you want to create lasting memories.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Are photo booths still popular?</div>
+                        <div class="faq-answer">
+                            <p>Photo Booths are still very popular to have at events such as a wedding, a birthday party, quinceanera, and sweet sixteen birthdays! Photo Booth rentals are even gaining MORE popularity at corporate event activations where we can brand the photo booth and it's prints, as well as capture user data for follow up.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Still Have Questions?</h2>
+                <p>Contact us today and we'll be happy to help you plan the perfect photo booth experience for your event!</p>
+                <div class="cta-buttons">
+                    <a href="/contact.html#book" class="btn btn-large">Get a Quote</a>
+                    <a href="tel:+16473750660" class="btn btn-outline btn-large">Call: 647.375.0660</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fun Snaps</h3>
+                    <p>Premium Photo Booth Rentals in Toronto and GTA</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/FunSnaps.ca" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/funsnaps.ca" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/contact.html#book">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>
+                        <a href="tel:+16473750660">647.375.0660</a><br>
+                        <a href="mailto:info@funsnaps.ca">info@funsnaps.ca</a><br>
+                        160 Applewood Crescent<br>
+                        Concord, ON L4K 4E5
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>
+                        <a href="/mississauga.html">Mississauga</a> • 
+                        <a href="/vaughan.html">Vaughan</a> • 
+                        <a href="/oakville.html">Oakville</a> • 
+                        <a href="/richmond-hill.html">Richmond Hill</a> • 
+                        Toronto • GTA
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2024</span> Fun Snaps Photo Booth Rental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Toggle current FAQ
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
