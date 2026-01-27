@@ -356,6 +356,17 @@ section {
     display: block;
 }
 
+/* City pages - limit image width to 50% */
+.city-page .features-image {
+    max-width: 50%;
+}
+
+@media (max-width: 768px) {
+    .city-page .features-image {
+        max-width: 100%;
+    }
+}
+
 /* Testimonials Section */
 .testimonials {
     background: var(--white);
