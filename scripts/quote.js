@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update unlimited prints price based on selected package hours
     function updateUnlimitedPrintsPrice() {
-        const unlimitedPrintsPriceDisplay = document.getElementById('unlimitedPrintsPrice');
+        const unlimitedPrintsPriceDisplay = document.getElementById('unlimitedPrintsPriceDisplay');
         if (unlimitedPrintsPriceDisplay && quoteData.package.hours > 0) {
             const price = quoteData.package.hours * 60;
             unlimitedPrintsPriceDisplay.textContent = `$${price}`;
@@ -194,10 +194,10 @@ document.addEventListener('DOMContentLoaded', function() {
             basePackagePriceEl.textContent = basePrice > 0 ? `$${basePrice.toLocaleString()}` : '$0';
         }
         if (unlimitedPrintsPriceEl) {
-            unlimitedPrintsPriceEl.textContent = `$${unlimitedPrintsPrice}`;
+            unlimitedPrintsPriceEl.textContent = unlimitedPrintsPrice > 0 ? `$${unlimitedPrintsPrice}` : '$0';
         }
         if (glamBoothPriceEl) {
-            glamBoothPriceEl.textContent = `$${glamBoothPrice}`;
+            glamBoothPriceEl.textContent = glamBoothPrice > 0 ? `$${glamBoothPrice}` : '$0';
         }
         if (waitingTimePriceEl) {
             waitingTimePriceEl.textContent = waitingTimePrice > 0 ? `$${waitingTimePrice}` : '$0';
