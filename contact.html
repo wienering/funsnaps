@@ -415,11 +415,49 @@
             }
 
             if (form) {
-                form.addEventListener('submit', function(e) {
+                form.addEventListener('submit', async function(e) {
                     e.preventDefault();
-                    // In a real implementation, this would send to a server
-                    showModal();
-                    this.reset();
+                    
+                    // Disable submit button to prevent double submissions
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.textContent;
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+
+                    try {
+                        // Collect form data
+                        const formData = new FormData(this);
+                        const data = Object.fromEntries(formData.entries());
+
+                        // Send to API endpoint
+                        const response = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data),
+                        });
+
+                        const result = await response.json();
+
+                        if (response.ok) {
+                            // Show success modal
+                            showModal();
+                            this.reset();
+                        } else {
+                            // Show error message
+                            alert('Sorry, there was an error sending your message. Please try again or call us at 647.375.0660');
+                            console.error('Form submission error:', result);
+                        }
+                    } catch (error) {
+                        // Show error message
+                        alert('Sorry, there was an error sending your message. Please try again or call us at 647.375.0660');
+                        console.error('Form submission error:', error);
+                    } finally {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }
                 });
             }
 

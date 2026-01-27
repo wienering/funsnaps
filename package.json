@@ -14,10 +14,25 @@
   ],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "resend": "^4.0.0"
+  },
   "devDependencies": {
     "serve": "^14.2.1"
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
