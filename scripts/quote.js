@@ -127,7 +127,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 waitingHoursInput.value = 0;
                 quoteData.addons.waitingTime = 0;
             } else {
-                quoteData.addons.waitingTime = parseInt(waitingHoursInput.value) || 0;
+                // Automatically set to 1 hour when checked
+                if (parseInt(waitingHoursInput.value) === 0) {
+                    waitingHoursInput.value = 1;
+                }
+                quoteData.addons.waitingTime = parseInt(waitingHoursInput.value) || 1;
             }
             updateWaitingTimePrice();
             updatePackageSummary();
