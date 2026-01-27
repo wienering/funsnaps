@@ -149,7 +149,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(77, 13, 109, 0.85);
+    background: rgba(77, 13, 109, 0.65);
 }
 
 .hero-content {
@@ -162,22 +162,27 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
+    opacity: 0.95;
 }
 
-.hero-description {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+.hero-trust-signal {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-top: 2rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    letter-spacing: 0.3px;
 }
 
 .hero-cta {
@@ -590,11 +595,11 @@ img {
     }
 
     .hero-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
-    .hero-description {
-        font-size: 1rem;
+    .hero-trust-signal {
+        font-size: 0.85rem;
     }
 
     .section-title {
@@ -638,7 +643,11 @@ img {
     }
 
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+    }
+
+    .hero-trust-signal {
+        font-size: 0.8rem;
     }
 
     .section-title {
