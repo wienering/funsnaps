@@ -58,8 +58,8 @@ export default async function handler(req, res) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'Fun Snaps <info@funsnaps.ca>',
-      to: process.env.RESEND_TO_EMAIL || 'info@funsnaps.ca',
+      from: 'Fun Snaps Photo Booth <info@funsnaps.ca>',
+      to: ['info@funsnaps.ca'], // Your email address
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: emailContent,
