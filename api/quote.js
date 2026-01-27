@@ -54,13 +54,17 @@ export default async function handler(req, res) {
     // Build add-ons list
     const addonsList = [];
     if (addons.unlimitedPrints) {
-      addonsList.push('Unlimited Prints - $120');
+      // Unlimited prints scales at $60 per hour
+      const unlimitedPrintsPrice = packageData.hours * 60;
+      addonsList.push(`Unlimited Prints - $${unlimitedPrintsPrice}`);
     }
     if (addons.glamBooth) {
       addonsList.push('Glam Booth - $75');
     }
     if (addons.waitingTime > 0) {
-      addonsList.push(`Waiting Time (${addons.waitingTime} hours) - $0`);
+      // Waiting time scales at $50 per hour
+      const waitingTimePrice = addons.waitingTime * 50;
+      addonsList.push(`Waiting Time (${addons.waitingTime} hours) - $${waitingTimePrice}`);
     }
 
     // Format the email content with styled HTML

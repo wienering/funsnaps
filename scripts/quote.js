@@ -98,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 reviewQuoteBtn.disabled = false;
             }
             
+            // Update unlimited prints price if selected
+            updateUnlimitedPrintsPrice();
             updatePackageSummary();
         });
     });
@@ -106,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (unlimitedPrintsCheckbox) {
         unlimitedPrintsCheckbox.addEventListener('change', function() {
             quoteData.addons.unlimitedPrints = this.checked;
+            updateUnlimitedPrintsPrice();
             updatePackageSummary();
         });
     }
@@ -126,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 quoteData.addons.waitingTime = parseInt(waitingHoursInput.value) || 0;
             }
+            updateWaitingTimePrice();
             updatePackageSummary();
         });
     }
@@ -134,18 +138,47 @@ document.addEventListener('DOMContentLoaded', function() {
         waitingHoursInput.addEventListener('change', function() {
             if (waitingTimeCheckbox && waitingTimeCheckbox.checked) {
                 quoteData.addons.waitingTime = parseInt(this.value) || 0;
+                updateWaitingTimePrice();
                 updatePackageSummary();
             }
         });
+    }
+
+    // Update waiting time price display
+    function updateWaitingTimePrice() {
+        const waitingTimePriceDisplay = document.getElementById('waitingTimePriceDisplay');
+        if (waitingTimePriceDisplay && quoteData.addons.waitingTime > 0) {
+            const price = quoteData.addons.waitingTime * 50;
+            waitingTimePriceDisplay.textContent = `$${price}`;
+        } else if (waitingTimePriceDisplay) {
+            waitingTimePriceDisplay.textContent = '$0';
+        }
+    }
+
+    // Update unlimited prints price based on selected package hours
+    function updateUnlimitedPrintsPrice() {
+        const unlimitedPrintsPriceDisplay = document.getElementById('unlimitedPrintsPrice');
+        if (unlimitedPrintsPriceDisplay && quoteData.package.hours > 0) {
+            const price = quoteData.package.hours * 60;
+            unlimitedPrintsPriceDisplay.textContent = `$${price}`;
+        } else if (unlimitedPrintsPriceDisplay) {
+            unlimitedPrintsPriceDisplay.textContent = '$120';
+        }
     }
 
     // Calculate and update summary
     function updatePackageSummary() {
         // Calculate totals
         let basePrice = quoteData.package.price || 0;
-        let unlimitedPrintsPrice = quoteData.addons.unlimitedPrints ? 120 : 0;
+        // Unlimited prints scales at $60 per hour
+        let unlimitedPrintsPrice = quoteData.addons.unlimitedPrints && quoteData.package.hours > 0 
+            ? quoteData.package.hours * 60 
+            : 0;
         let glamBoothPrice = quoteData.addons.glamBooth ? 75 : 0;
-        let waitingTimePrice = 0; // Free
+        // Waiting time scales at $50 per hour
+        let waitingTimePrice = quoteData.addons.waitingTime > 0 
+            ? quoteData.addons.waitingTime * 50 
+            : 0;
         
         const total = basePrice + unlimitedPrintsPrice + glamBoothPrice + waitingTimePrice;
         quoteData.total = total;
@@ -167,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             glamBoothPriceEl.textContent = `$${glamBoothPrice}`;
         }
         if (waitingTimePriceEl) {
-            waitingTimePriceEl.textContent = '$0';
+            waitingTimePriceEl.textContent = waitingTimePrice > 0 ? `$${waitingTimePrice}` : '$0';
         }
         if (totalPriceEl) {
             totalPriceEl.textContent = `$${total.toLocaleString()}`;
@@ -223,10 +256,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let addonsHTML = '';
             
             if (quoteData.addons.unlimitedPrints) {
+                const unlimitedPrintsPrice = quoteData.package.hours * 60;
                 addonsHTML += `
                     <div class="summary-item">
                         <span class="summary-label">Unlimited Prints:</span>
-                        <span class="summary-value">$120</span>
+                        <span class="summary-value">$${unlimitedPrintsPrice}</span>
                     </div>
                 `;
             }
@@ -241,10 +275,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (quoteData.addons.waitingTime > 0) {
+                const waitingTimePrice = quoteData.addons.waitingTime * 50;
                 addonsHTML += `
                     <div class="summary-item">
                         <span class="summary-label">Waiting Time (${quoteData.addons.waitingTime} hours):</span>
-                        <span class="summary-value">$0</span>
+                        <span class="summary-value">$${waitingTimePrice}</span>
                     </div>
                 `;
             }

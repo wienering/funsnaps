@@ -315,6 +315,16 @@
         .quote-actions .btn {
             flex: 1;
         }
+        .quote-actions .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .quote-actions .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
         
         .loading-overlay {
             display: none;
@@ -498,19 +508,19 @@
                             <div class="price">$750</div>
                             <div class="description">Great for most events</div>
                         </div>
-                        <div class="package-card" data-hours="4" data-price="950">
+                        <div class="package-card" data-hours="4" data-price="1000">
                             <h3>4 Hours</h3>
-                            <div class="price">$950</div>
+                            <div class="price">$1,000</div>
                             <div class="description">Ideal for longer celebrations</div>
                         </div>
-                        <div class="package-card" data-hours="5" data-price="1150">
+                        <div class="package-card" data-hours="5" data-price="1250">
                             <h3>5 Hours</h3>
-                            <div class="price">$1,150</div>
+                            <div class="price">$1,250</div>
                             <div class="description">Extended party coverage</div>
                         </div>
-                        <div class="package-card" data-hours="6" data-price="1350">
+                        <div class="package-card" data-hours="6" data-price="1450">
                             <h3>6 Hours</h3>
-                            <div class="price">$1,350</div>
+                            <div class="price">$1,450</div>
                             <div class="description">All-day event coverage</div>
                         </div>
                     </div>
@@ -519,10 +529,10 @@
                         <h3>Add-ons</h3>
                         <div class="addon-item">
                             <label>
-                                <input type="checkbox" id="unlimitedPrints" data-price="120">
+                                <input type="checkbox" id="unlimitedPrints">
                                 <span class="addon-name">Unlimited Prints</span>
                             </label>
-                            <span class="addon-price">$120</span>
+                            <span class="addon-price" id="unlimitedPrintsPrice">$120</span>
                         </div>
                         <div class="addon-item" style="flex-direction: column; align-items: flex-start;">
                             <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
@@ -542,7 +552,7 @@
                             <div class="waiting-time-controls">
                                 <span>Hours:</span>
                                 <input type="number" id="waitingHours" min="0" max="4" value="0" disabled>
-                                <span class="addon-price">$0</span>
+                                <span class="addon-price" id="waitingTimePriceDisplay">$0</span>
                             </div>
                         </div>
                     </div>
