@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Contact form submission
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Collect contact data
@@ -72,6 +72,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 !quoteData.contact.phone || !quoteData.contact.eventDate) {
                 alert('Please fill in all required fields.');
                 return;
+            }
+
+            // Send contact info to API (don't block on error, just log it)
+            try {
+                await fetch('/api/quote-contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(quoteData.contact),
+                });
+            } catch (error) {
+                // Silently fail - don't interrupt user flow
+                console.error('Error sending contact info:', error);
             }
 
             // Move to step 2
