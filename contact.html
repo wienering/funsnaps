@@ -336,14 +336,86 @@
         </div>
     </footer>
 
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 10000; align-items: center; justify-content: center;">
+        <div class="modal-content" style="background: var(--white); padding: 3rem; border-radius: 10px; max-width: 500px; width: 90%; text-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); position: relative; animation: modalFadeIn 0.3s ease;">
+            <button class="modal-close" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: var(--text-light); transition: var(--transition);" aria-label="Close modal">&times;</button>
+            <div style="margin-bottom: 1.5rem;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto; color: var(--primary-color);">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M8 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-dark);">Thank You!</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-light); margin-bottom: 2rem;">Thank you for your inquiry! We will contact you shortly.</p>
+            <button class="btn btn-large modal-close-btn" style="width: 100%;">Close</button>
+        </div>
+    </div>
+
+    <style>
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal {
+            display: flex !important;
+        }
+
+        .modal-close:hover {
+            color: var(--text-dark) !important;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                padding: 2rem 1.5rem !important;
+            }
+        }
+    </style>
+
     <script src="scripts/main.js"></script>
     <script>
         // Form handling
-        document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
+        const form = document.querySelector('.contact-form');
+        const modal = document.getElementById('successModal');
+        const closeButtons = document.querySelectorAll('.modal-close, .modal-close-btn');
+
+        form?.addEventListener('submit', function(e) {
             e.preventDefault();
             // In a real implementation, this would send to a server
-            alert('Thank you for your inquiry! We will contact you shortly.');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
             this.reset();
+        });
+
+        // Close modal handlers
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
         });
 
         // Input focus effects
