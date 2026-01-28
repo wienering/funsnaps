@@ -1,0 +1,22 @@
+{
+  "phone": [
+    "8871234567",
+    "6473750660",
+    "+16473750660",
+    "2345678901"
+  ],
+  "email": [
+    "info@funsnaps.ca"
+  ],
+  "address": {
+    "street": "160 Applewood Crescent",
+    "city": "Concord",
+    "region": "ON",
+    "postal_code": "L4K 4E5",
+    "country": "CA"
+  },
+  "social_media": {
+    "facebook": "https://www.facebook.com/FunSnaps.ca",
+    "instagram": "https://www.instagram.com/funsnaps.ca"
+  }
+}

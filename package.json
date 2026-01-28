@@ -1,0 +1,40 @@
+{
+  "name": "funsnaps-website",
+  "version": "1.0.0",
+  "description": "Fun Snaps Photo Booth Rental Website",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "photo-booth",
+    "rental",
+    "toronto"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "resend": "^4.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
