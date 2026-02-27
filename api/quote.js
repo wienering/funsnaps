@@ -373,7 +373,7 @@ export default async function handler(req, res) {
           <p>We're excited to help make your event unforgettable! If you have any questions or would like to customize your package, please don't hesitate to reach out to us.</p>
 
           <div style="text-align: center;">
-            <a href="https://www.funsnaps.ca/contact.html#book" class="cta-button">Book Now</a>
+            <a href="https://www.funsnaps.ca/contact-us#book" class="cta-button">Book Now</a>
           </div>
 
           <div class="email-footer">

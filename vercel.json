@@ -4,6 +4,13 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/contact",
+      "destination": "/contact-us",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",
@@ -11,7 +18,3 @@
     }
   ]
 }
-
-
-
-
