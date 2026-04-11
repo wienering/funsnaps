@@ -13,6 +13,7 @@
     <meta property="og:title" content="Photo Booth Rentals Vaughan &amp; GTA Weddings | Fun Snaps">
     <meta property="og:description" content="Open-air photo booths for Vaughan and GTA weddings and corporate events. On-site attendant, prints in about 10 seconds, packages from $550. Call 647.375.0660.">
     <meta property="og:image" content="https://www.funsnaps.ca/assets/images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp">
+    <meta property="og:image:alt" content="Guests using Fun Snaps open-air photo booth at a GTA event">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -40,7 +41,7 @@
           "image": {"@id": "https://www.funsnaps.ca/#primaryimage"},
           "thumbnailUrl": "https://www.funsnaps.ca/assets/images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp",
           "datePublished": "2024-01-01T00:00:00+00:00",
-          "dateModified": "2026-03-24T00:00:00+00:00",
+          "dateModified": "2026-04-11T00:00:00+00:00",
           "description": "Open-air photo booths for Vaughan and GTA weddings and corporate events. On-site attendant, prints in about 10 seconds, packages from $550. Call 647.375.0660.",
           "breadcrumb": {"@id": "https://www.funsnaps.ca/#breadcrumb"},
           "inLanguage": "en-CA",
@@ -160,22 +161,22 @@
     }
     </script>
 </head>
-<body>
+<body class="home">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation: fixed, always visible (no hide-on-scroll) -->
+    <nav class="navbar" aria-label="Primary">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="/" class="logo">
-                    <img src="assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.png" alt="Fun Snaps Photo Booth Rental" class="logo-img">
+                    <img src="assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.png" alt="Fun Snaps Photo Booth Rental" class="logo-img" width="103" height="97">
                 </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <button type="button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="/" class="active">Home</a></li>
+                <ul class="nav-menu" id="primary-nav">
+                    <li><a href="/" class="active" aria-current="page">Home</a></li>
                     <li><a href="/pricing">Pricing</a></li>
                     <li><a href="/faq">FAQ</a></li>
                     <li><a href="/contact-us">Contact Us</a></li>
@@ -186,20 +187,21 @@
         </div>
     </nav>
 
-    <main id="main-content" tabindex="-1">
-    <!-- Hero Section -->
-    <section class="hero editorial-hero">
+    <main id="main-content" class="home-editorial" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero editorial-hero home-hero">
         <div class="hero-background">
             <img src="assets/images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp" alt="Guests using an open-air photo booth at a GTA event" class="hero-image" width="1920" height="1080" fetchpriority="high" decoding="async">
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
             <div class="hero-content">
+                <p class="home-hero-eyebrow">Open-air photo booths · Vaughan &amp; the GTA</p>
                 <h1 class="hero-title">
                     <span class="hero-title-line">Photo booth nights</span>
-                    <span class="hero-title-line hero-title-accent">that actually pull a crowd</span>
+                    <span class="hero-title-line hero-title-accent">that pull a crowd.</span>
                 </h1>
-                <h2 class="hero-subtitle">Glam booth and 360 video for weddings and corporate events—based in Concord, serving Vaughan and the GTA.</h2>
+                <p class="home-hero-subtitle">Glam booth and 360 video for weddings and corporate events—based in Concord, serving Vaughan and the GTA.</p>
                 <div class="hero-cta">
                     <a href="/quote" class="btn btn-large">Get a quote</a>
                     <a href="/pricing" class="btn btn-outline btn-large">View packages</a>
@@ -209,8 +211,19 @@
         </div>
     </section>
 
-    <!-- Introduction Section -->
-    <section class="intro intro-editorial">
+    <div class="home-marquee" role="presentation">
+        <div class="home-marquee-track">
+            <div class="home-marquee-inner">
+                <span>Prints.</span><span>Fast.</span><span>On-site.</span><span>Vaughan &amp; GTA.</span><span>Open-air.</span><span>Attended.</span>
+            </div>
+            <div class="home-marquee-inner" aria-hidden="true">
+                <span>Prints.</span><span>Fast.</span><span>On-site.</span><span>Vaughan &amp; GTA.</span><span>Open-air.</span><span>Attended.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <section class="intro intro-editorial home-intro">
         <div class="container">
             <div class="intro-content">
                 <p class="section-kicker section-kicker-left">What we do</p>
@@ -223,36 +236,59 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
+    <!-- Two-up promos -->
+    <section class="home-promos" aria-labelledby="home-promos-heading">
+        <div class="container">
+            <p class="section-kicker">Explore</p>
+            <h2 id="home-promos-heading" class="section-title">Packages, pricing &amp; corporate nights</h2>
+            <p class="section-description">Straightforward quotes—see packages from $550 or how we handle branded corporate events.</p>
+            <div class="home-promos-grid">
+                <a class="home-promo" href="/pricing" style="background-image: url('assets/images/wp-content/uploads/2022/04/party-photo-booth-rental.webp');">
+                    <span class="home-promo-kicker">Packages</span>
+                    <span class="home-promo-heading">Pricing that scales with your hours</span>
+                    <span class="home-promo-text">Essential to deluxe, deposits, and what’s included—so you’re not guessing at the invoice.</span>
+                    <span class="home-promo-link">View pricing</span>
+                </a>
+                <a class="home-promo" href="/faq" style="background-image: url('assets/images/wp-content/uploads/2022/12/2022_10_22_224230_169.webp');">
+                    <span class="home-promo-kicker">Corporate &amp; brands</span>
+                    <span class="home-promo-heading">Logo on the strip, steady throughput</span>
+                    <span class="home-promo-text">Travel, stairs, and setup questions—answered before you book. Perfect for mix-and-mingle crowds.</span>
+                    <span class="home-promo-link">Read the FAQ</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services home-services">
         <div class="container">
             <p class="section-kicker">Offerings</p>
             <h2 class="section-title">Setups that match your room</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="assets/images/wp-content/uploads/2022/04/camera-phone-1.png" alt="Icon: classic enclosed photo booth" width="80" height="80">
+                        <img src="assets/images/wp-content/uploads/2022/04/camera-phone-1.png" alt="" width="80" height="80">
                     </div>
                     <h3>Classic enclosed booth</h3>
                     <p>When you want that tight, retro strip and a bit of privacy—still with instant strips and digital copies.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="assets/images/wp-content/uploads/2018/12/globe-free-img.png" alt="Icon: compact booth for smaller spaces" width="80" height="80">
+                        <img src="assets/images/wp-content/uploads/2018/12/globe-free-img.png" alt="" width="80" height="80">
                     </div>
                     <h3>Compact footprint</h3>
                     <p>Tight floor plan? We can tuck in a smaller rig without turning the night into a tech headache.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="assets/images/wp-content/uploads/2018/12/lock-free-img.png" alt="Icon: wedding photo booth packages" width="80" height="80">
+                        <img src="assets/images/wp-content/uploads/2018/12/lock-free-img.png" alt="" width="80" height="80">
                     </div>
                     <h3>Weddings</h3>
                     <p>Custom strip art with your names and date, props that fit the room, and prints guests grab on the way to the dance floor.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="assets/images/wp-content/uploads/2018/12/tag-free-img.png" alt="Icon: corporate and branded photo booth events" width="80" height="80">
+                        <img src="assets/images/wp-content/uploads/2018/12/tag-free-img.png" alt="" width="80" height="80">
                     </div>
                     <h3>Corporate &amp; brand nights</h3>
                     <p>Logo on the template, steady throughput for mix-and-mingle crowds, and a pro on headset if anything blips.</p>
@@ -287,7 +323,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features -->
     <section class="features">
         <div class="container">
             <div class="features-content">
@@ -310,30 +346,30 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="features gallery-section" style="background: var(--white);">
+    <!-- Gallery -->
+    <section class="features gallery-section home-gallery">
         <div class="container">
             <p class="section-kicker">Gallery</p>
             <h2 class="section-title">A few nights we’ve been part of</h2>
             <p class="section-description">Same gear you get—different crowds, same goal: prints walking off the table.</p>
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 2rem;">
-                <div class="service-card">
-                    <div class="features-image" style="margin-bottom: 1rem;">
-                        <img src="assets/images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp" alt="Wedding guests at photo booth" width="400" height="250" loading="lazy" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+            <div class="services-grid">
+                <div class="service-card gallery-card">
+                    <div class="home-gallery-thumb">
+                        <img src="assets/images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp" alt="Wedding guests at the Fun Snaps photo booth" width="400" height="250" loading="lazy" decoding="async">
                     </div>
                     <h3>Weddings</h3>
                     <p>Big groups around the open-air, strips for the table, and a line that moves because the attendant keeps pace.</p>
                 </div>
-                <div class="service-card">
-                    <div class="features-image" style="margin-bottom: 1rem;">
-                        <img src="assets/images/wp-content/uploads/2022/04/party-photo-booth-rental.webp" alt="Corporate event photo booth" width="400" height="250" loading="lazy" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                <div class="service-card gallery-card">
+                    <div class="home-gallery-thumb">
+                        <img src="assets/images/wp-content/uploads/2022/04/party-photo-booth-rental.webp" alt="Corporate event photo booth setup" width="400" height="250" loading="lazy" decoding="async">
                     </div>
                     <h3>Corporate</h3>
                     <p>Brand on the strip, quick cycles between speeches, and a setup that doesn’t fight the AV team for power.</p>
                 </div>
-                <div class="service-card">
-                    <div class="features-image" style="margin-bottom: 1rem;">
-                        <img src="assets/images/wp-content/uploads/2022/12/2022_10_22_224230_169.webp" alt="Celebration with photo booth" width="400" height="250" loading="lazy" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;">
+                <div class="service-card gallery-card">
+                    <div class="home-gallery-thumb">
+                        <img src="assets/images/wp-content/uploads/2022/12/2022_10_22_224230_169.webp" alt="Celebration with Fun Snaps photo booth" width="400" height="250" loading="lazy" decoding="async">
                     </div>
                     <h3>Milestones</h3>
                     <p>Birthdays, anniversaries, fundraisers—props matched to the room, not a one-size bin from 2014.</p>
@@ -342,7 +378,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials / logos -->
     <section class="testimonials">
         <div class="container">
             <p class="section-kicker">Clients</p>
@@ -365,10 +401,10 @@
         </div>
     </section>
 
-    <!-- Local trust - condensed -->
-    <section class="intro trust-section" style="background: var(--white);">
+    <!-- Local trust -->
+    <section class="intro trust-section home-trust">
         <div class="container">
-            <div class="intro-content" style="max-width: 900px;">
+            <div class="intro-content">
                 <p class="section-kicker">Local</p>
                 <h2 class="section-title section-title-left">Vaughan &amp; GTA—without the filler paragraph</h2>
                 <p class="section-description" style="text-align: left; max-width: none;">
@@ -388,13 +424,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="editorial-cta-band">
         <div class="container">
             <h2>Want a straight answer on your date?</h2>
             <p class="cta-lead">Tell us the venue and head count—we’ll reply with availability and a clear quote. If you’d rather talk, call below.</p>
             <div class="cta-buttons" style="justify-content: center;">
-                <a href="/quote" class="btn btn-large" style="background: var(--secondary-color); border-color: var(--secondary-color); color: #fff;">Get a quote</a>
+                <a href="/quote" class="btn btn-large btn-cta-primary">Get a quote</a>
                 <a href="tel:+16473750660" class="btn btn-outline btn-large" style="border-color: #fff; color: #fff;">647.375.0660</a>
             </div>
             <p class="cta-contact-line"><a href="mailto:info@funsnaps.ca">info@funsnaps.ca</a></p>

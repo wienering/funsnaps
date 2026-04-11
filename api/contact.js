@@ -61,12 +61,12 @@ export default async function handler(req, res) {
             background-color: #ffffff;
           }
           .email-header {
-            border-bottom: 3px solid #4d0d6d;
+            border-bottom: 3px solid #2a1810;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
           }
           .email-header h2 {
-            color: #4d0d6d;
+            color: #2a1810;
             font-size: 1.75rem;
             margin: 0;
             font-weight: 600;
@@ -83,7 +83,7 @@ export default async function handler(req, res) {
             border-bottom: none;
           }
           .field-label {
-            color: #4d0d6d;
+            color: #2a1810;
             font-weight: 600;
             font-size: 0.875rem;
             text-transform: uppercase;
@@ -100,7 +100,7 @@ export default async function handler(req, res) {
             background-color: #f8f9fa;
             padding: 1rem;
             border-radius: 5px;
-            border-left: 3px solid #5ab5d5;
+            border-left: 3px solid #c45c2c;
             margin-top: 0.5rem;
           }
           .email-footer {
@@ -125,11 +125,11 @@ export default async function handler(req, res) {
             </div>
             <div class="field-group">
               <span class="field-label">Email</span>
-              <p class="field-value"><a href="mailto:${email}" style="color: #5ab5d5; text-decoration: none;">${email}</a></p>
+              <p class="field-value"><a href="mailto:${email}" style="color: #c45c2c; text-decoration: none;">${email}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Phone</span>
-              <p class="field-value"><a href="tel:${phone.replace(/\D/g, '')}" style="color: #5ab5d5; text-decoration: none;">${phone}</a></p>
+              <p class="field-value"><a href="tel:${phone.replace(/\D/g, '')}" style="color: #c45c2c; text-decoration: none;">${phone}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Event Date</span>

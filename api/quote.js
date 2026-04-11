@@ -89,12 +89,12 @@ export default async function handler(req, res) {
             background-color: #ffffff;
           }
           .email-header {
-            border-bottom: 3px solid #4d0d6d;
+            border-bottom: 3px solid #2a1810;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
           }
           .email-header h2 {
-            color: #4d0d6d;
+            color: #2a1810;
             font-size: 1.75rem;
             margin: 0;
             font-weight: 600;
@@ -106,7 +106,7 @@ export default async function handler(req, res) {
             margin-bottom: 1.5rem;
           }
           .quote-section h3 {
-            color: #4d0d6d;
+            color: #2a1810;
             font-size: 1.25rem;
             margin-top: 0;
             margin-bottom: 1rem;
@@ -120,7 +120,7 @@ export default async function handler(req, res) {
             border-bottom: none;
           }
           .field-label {
-            color: #4d0d6d;
+            color: #2a1810;
             font-weight: 600;
             font-size: 0.875rem;
             text-transform: uppercase;
@@ -134,7 +134,7 @@ export default async function handler(req, res) {
             margin: 0;
           }
           .quote-total {
-            background-color: #4d0d6d;
+            background-color: #2a1810;
             color: #ffffff;
             padding: 1.5rem;
             border-radius: 5px;
@@ -181,11 +181,11 @@ export default async function handler(req, res) {
             </div>
             <div class="field-group">
               <span class="field-label">Email</span>
-              <p class="field-value"><a href="mailto:${contact.email}" style="color: #5ab5d5; text-decoration: none;">${contact.email}</a></p>
+              <p class="field-value"><a href="mailto:${contact.email}" style="color: #c45c2c; text-decoration: none;">${contact.email}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Phone</span>
-              <p class="field-value"><a href="tel:${contact.phone.replace(/\D/g, '')}" style="color: #5ab5d5; text-decoration: none;">${contact.phone}</a></p>
+              <p class="field-value"><a href="tel:${contact.phone.replace(/\D/g, '')}" style="color: #c45c2c; text-decoration: none;">${contact.phone}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Event Date</span>
@@ -244,12 +244,12 @@ export default async function handler(req, res) {
           }
           .email-header {
             text-align: center;
-            border-bottom: 3px solid #4d0d6d;
+            border-bottom: 3px solid #2a1810;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
           }
           .email-header h2 {
-            color: #4d0d6d;
+            color: #2a1810;
             font-size: 1.75rem;
             margin: 0;
             font-weight: 600;
@@ -261,7 +261,7 @@ export default async function handler(req, res) {
             margin-bottom: 1.5rem;
           }
           .quote-section h3 {
-            color: #4d0d6d;
+            color: #2a1810;
             font-size: 1.25rem;
             margin-top: 0;
             margin-bottom: 1rem;
@@ -275,7 +275,7 @@ export default async function handler(req, res) {
             border-bottom: none;
           }
           .field-label {
-            color: #4d0d6d;
+            color: #2a1810;
             font-weight: 600;
             font-size: 0.875rem;
             text-transform: uppercase;
@@ -289,7 +289,7 @@ export default async function handler(req, res) {
             margin: 0;
           }
           .quote-total {
-            background-color: #4d0d6d;
+            background-color: #2a1810;
             color: #ffffff;
             padding: 1.5rem;
             border-radius: 5px;
@@ -307,7 +307,7 @@ export default async function handler(req, res) {
           }
           .cta-button {
             display: inline-block;
-            background-color: #5ab5d5;
+            background-color: #c45c2c;
             color: #ffffff;
             padding: 1rem 2rem;
             text-decoration: none;
@@ -378,8 +378,8 @@ export default async function handler(req, res) {
 
           <div class="email-footer">
             <p><strong>Fun Snaps Photo Booth Rental</strong></p>
-            <p>Phone: <a href="tel:+16473750660" style="color: #5ab5d5; text-decoration: none;">647.375.0660</a></p>
-            <p>Email: <a href="mailto:info@funsnaps.ca" style="color: #5ab5d5; text-decoration: none;">info@funsnaps.ca</a></p>
+            <p>Phone: <a href="tel:+16473750660" style="color: #c45c2c; text-decoration: none;">647.375.0660</a></p>
+            <p>Email: <a href="mailto:info@funsnaps.ca" style="color: #c45c2c; text-decoration: none;">info@funsnaps.ca</a></p>
             <p>160 Applewood Crescent, Concord, ON L4K 4E5</p>
           </div>
         </div>
