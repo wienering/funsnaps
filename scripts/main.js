@@ -67,4 +67,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (copyrightYear) {
         copyrightYear.textContent = new Date().getFullYear();
     }
+
+    var animatedHeadlines = document.querySelectorAll('.animated-headline');
+    if (animatedHeadlines.length) {
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) {
+            animatedHeadlines.forEach(function (el) {
+                el.classList.add('is-in-view');
+            });
+        } else {
+            var headlineObserver = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-in-view');
+                            headlineObserver.unobserve(entry.target);
+                        }
+                    });
+                },
+                { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.15 }
+            );
+            animatedHeadlines.forEach(function (el) {
+                headlineObserver.observe(el);
+            });
+        }
+    }
 });
