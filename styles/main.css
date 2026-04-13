@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+/* Fonts loaded via <link> in each HTML page (avoids render-blocking @import). */
 
 /* Reset and Base Styles */
 * {
@@ -28,6 +28,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -1493,3 +1494,26 @@ body.home {
     }
 }
 
+a:focus-visible,
+button:focus-visible,
+.nav-menu a:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1100px) {
+    .nav-wrapper.nav-lucci .nav-menu a,
+    .nav-wrapper.nav-lucci .nav-menu .btn-primary {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .nav-wrapper.nav-lucci .mobile-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+        justify-content: center;
+        align-items: center;
+    }
+}

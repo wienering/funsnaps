@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
     <meta name="description" content="Toronto photo booth rentals for downtown and neighbourhoods. Open-air booths, attendant on site, packages from $550. Corporate, weddings, parties: get a quote.">
     <meta name="keywords" content="photo booth rental toronto, toronto photo booth, wedding photo booth toronto, corporate photo booth toronto, photo booth rental toronto ontario, affordable photo booth toronto, photo booth for wedding toronto, photo booth rental near me toronto, party photo booth toronto, instant photo booth toronto">
     <title>Toronto Photo Booth Rental | Fun Snaps Book Today</title>
@@ -25,7 +29,7 @@
     <link rel="icon" href="favicon.ico" sizes="48x48 32x32 16x16">
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" class="yoast-schema-graph">
     {
@@ -70,8 +74,8 @@
           ],
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.funsnaps.ca/assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.png",
-            "contentUrl": "https://www.funsnaps.ca/assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.png"
+            "url": "https://www.funsnaps.ca/assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.webp",
+            "contentUrl": "https://www.funsnaps.ca/assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.webp"
           }
         }
       ]
@@ -86,6 +90,13 @@
           "@id": "https://www.funsnaps.ca/#localbusiness",
           "name": "Fun Snaps Photo Booth Rental",
           "url": "https://www.funsnaps.ca/",
+          "image": "https://www.funsnaps.ca/assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.webp",
+          "logo": "https://www.funsnaps.ca/assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.webp",
+          "sameAs": [
+            "https://www.google.com/maps/place/Fun+Snaps+Photo+Booth+Rental/@43.80915,-79.5349651,17z/data=!3m1!4b1!4m6!3m5!1s0x882b2f0bb96164dd:0xa6b61d0a0c157b40!8m2!3d43.80915!4d-79.5349651!16s%2Fg%2F1tfbz2ks",
+            "https://www.facebook.com/FunSnaps.ca",
+            "https://www.instagram.com/funsnaps.ca"
+          ],
           "telephone": "+16473750660",
           "email": "info@funsnaps.ca",
           "hasMap": "https://www.google.com/maps/place/Fun+Snaps+Photo+Booth+Rental/@43.80915,-79.5349651,17z/data=!3m1!4b1!4m6!3m5!1s0x882b2f0bb96164dd:0xa6b61d0a0c157b40!8m2!3d43.80915!4d-79.5349651!16s%2Fg%2F1tfbz2ks",
@@ -129,22 +140,11 @@
       ]
     }
     </script>
-    <style>
-        /* Limit images on city pages to 50% width and center them */
-        .features-image {
-            max-width: 50%;
-            margin: 0 auto;
-        }
-        @media (max-width: 768px) {
-            .features-image {
-                max-width: 100%;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="city-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <header class="navbar navbar-lucci">
+    <header id="site-navigation" class="navbar navbar-lucci">
         <div class="container">
             <div class="nav-wrapper nav-lucci">
                 <ul class="nav-menu nav-menu-left">
@@ -153,7 +153,10 @@
                     <li><a href="/pricing">Pricing</a></li>
                 </ul>
                 <a href="/" class="logo logo-center" aria-label="Fun Snaps home">
-                    <img src="assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.png" alt="Fun Snaps Photo Booth Rental" class="logo-img" width="103" height="97">
+                    <picture>
+                        <source srcset="assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.webp" type="image/webp">
+                        <img src="assets/images/wp-content/uploads/2024/03/Fun-Snaps-Logo-png-103x97-1.png" alt="Fun Snaps Photo Booth Rental" class="logo-img" width="103" height="97" decoding="async">
+                    </picture>
                 </a>
                 <ul class="nav-menu nav-menu-right">
                     <li><a href="/faq">FAQ</a></li>
@@ -165,6 +168,8 @@
             </div>
         </div>
     </header>
+
+    <main id="main-content" tabindex="-1">
 
     <section class="inner-hero-lucci">
         <div class="container">
@@ -179,10 +184,10 @@
             <div class="intro-content">
                 <h2 class="section-title">Photo booth rentals in Toronto</h2>
                 <p class="section-description" style="text-align: left; max-width: none;">
-                    We set up downtown, North York, Etobicoke, Scarborough, and everywhere in between. Weddings, corporate nights, birthdays, fundraisers. Packages start at $550 for two hours with an attendant, prints, and digital copies.
+                    Planning a reception near City Hall, a loft wedding in Liberty Village, or a corporate mixer in the Financial District? We work around King streetcar diversions, hotel freight elevators, and tight Distillery District brick rooms every weekend—same packages from $550 for two hours, attendant included, prints and digital copies included.
                 </p>
                 <p style="font-size: 1.125rem; line-height: 1.8; margin-top: 1.5rem;">
-                    We’ve been in ballrooms at the Royal York and the Metro Toronto Convention Centre, and in smaller rooms where floor space is tight. Tell us the venue and we’ll say if the layout works and what time we need for load-in.
+                    We’ve rolled cases through the Metro Toronto Convention Centre dock schedule, split setup between Royal York ballrooms and service corridors, and squeezed an open-air line into narrow galleries off Queen East. Tell us the venue name—not just “downtown Toronto”—and we’ll map load-in so we’re printing during cocktail hour, not stuck at security.
                 </p>
             </div>
         </div>
@@ -256,44 +261,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="services" style="background: var(--white);">
-        <div class="container">
-            <h2 class="section-title">What Our Toronto Clients Say</h2>
-            <p class="section-description">Don't just take our word for it - see what our clients have to say about their photo booth rental experience</p>
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="service-card" style="text-align: left;">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="color: #ffc107; font-size: 1.25rem; margin-bottom: 0.5rem;">★★★★★</div>
-                        <p style="font-size: 1.125rem; line-height: 1.8; font-style: italic; color: var(--text-light);">
-                            "So fun, just be ready with your best pose and smile in 10 seconds or less!!!!"
-                        </p>
-                    </div>
-                    <p style="font-weight: 600; color: var(--text-dark); margin-top: 1rem;">Tracey</p>
-                </div>
-                <div class="service-card" style="text-align: left;">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="color: #ffc107; font-size: 1.25rem; margin-bottom: 0.5rem;">★★★★★</div>
-                        <p style="font-size: 1.125rem; line-height: 1.8; font-style: italic; color: var(--text-light);">
-                            "Wonderful experience! Timely and fun. The gentleman running the booth was kind and helpful. Would highly recommend."
-                        </p>
-                    </div>
-                    <p style="font-weight: 600; color: var(--text-dark); margin-top: 1rem;">Natasha</p>
-                </div>
-                <div class="service-card" style="text-align: left;">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="color: #ffc107; font-size: 1.25rem; margin-bottom: 0.5rem;">★★★★★</div>
-                        <p style="font-size: 1.125rem; line-height: 1.8; font-style: italic; color: var(--text-light);">
-                            "Loved the way everyone was speaking. They were so friendly."
-                        </p>
-                    </div>
-                    <p style="font-weight: 600; color: var(--text-dark); margin-top: 1rem;">Ridzi</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Event Types Section -->
+<!-- Event Types Section -->
     <section class="services" style="background: var(--white);">
         <div class="container">
             <h2 class="section-title">Photo Booth Rentals for Every Toronto Event Type</h2>
@@ -447,101 +415,19 @@
                         instant photo prints (2 copies per session), digital copies via email/text, a variety of fun 
                         props, custom photo templates, and an online gallery with all photos delivered within 24-48 hours.
                     </p>
+
+                    <h3 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-dark);">
+                        How does load-in work at the Metro Toronto Convention Centre?
+                    </h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        South Building and North Building use different dock addresses, freight elevator banks, and security check-in paths. Send us the hall name (for example Hall D vs Hall F) and whether your event is trade-show or wedding timing—we’ll quote an arrival window that clears dock paperwork before your guests expect the booth running.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="services" style="background: var(--white);">
-        <div class="container">
-            <h2 class="section-title">What Our Toronto Clients Say</h2>
-            <p class="section-description">
-                Don't just take our word for it - hear from satisfied customers who have used our photo booth rental services in Toronto
-            </p>
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 2rem;">
-                <div class="service-card">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-                            <span style="color: #ffc107;">★★★★★</span>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                        "Great time"
-                    </p>
-                    <p style="font-weight: 600; color: var(--text-dark);">- Naresh</p>
-                </div>
-                <div class="service-card">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-                            <span style="color: #ffc107;">★★★★★</span>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                        "So fun, just be ready with your best pose and smile in 10 seconds or less!!!!"
-                    </p>
-                    <p style="font-weight: 600; color: var(--text-dark);">- Tracey</p>
-                </div>
-                <div class="service-card">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-                            <span style="color: #ffc107;">★★★★★</span>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                        "Awesome"
-                    </p>
-                    <p style="font-weight: 600; color: var(--text-dark);">- Jacquie</p>
-                </div>
-                <div class="service-card">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-                            <span style="color: #ffc107;">★★★★★</span>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                        "Wonderful experience! Timely and fun. The gentleman running the booth was kind and helpful. Would highly recommend."
-                    </p>
-                    <p style="font-weight: 600; color: var(--text-dark);">- Natasha</p>
-                </div>
-                <div class="service-card">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-                            <span style="color: #ffc107;">★★★★★</span>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                        "🤩"
-                    </p>
-                    <p style="font-weight: 600; color: var(--text-dark);">- Beatrice</p>
-                </div>
-                <div class="service-card">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-                            <span style="color: #ffc107;">★★★★★</span>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                        "Loved the way everyone was speaking. They were so friendly."
-                    </p>
-                    <p style="font-weight: 600; color: var(--text-dark);">- Ridzi</p>
-                </div>
-                <div class="service-card">
-                    <div style="margin-bottom: 1rem;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
-                            <span style="color: #ffc107;">★★★★★</span>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                        "It was good"
-                    </p>
-                    <p style="font-weight: 600; color: var(--text-dark);">- Saifkhan</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
+<!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
@@ -573,6 +459,7 @@
         </div>
     </section>
 
+    </main>
     <!-- Footer -->
     <footer class="footer footer-lucci">
         <div class="container">
@@ -627,6 +514,6 @@
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.min.js" defer></script>
 </body>
 </html>
