@@ -186,7 +186,13 @@ a{ color:inherit; }
 .hero{ position:relative; height:100vh; min-height:640px; overflow:hidden; }
 .hero-placeholder{
   position:absolute; inset:0;
-  background: url("../images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp") center/cover no-repeat;
+  /* v4 hero, converted from the 8MB source PNG: 211KB webp with a jpg fallback
+     and a 1200px variant for phones. Preloaded in the page head, because a CSS
+     background is discovered late and this is the LCP element. */
+  background: url("../img/hero.jpg") center/cover no-repeat;
+  background-image: -webkit-image-set(url("../img/hero.webp") type("image/webp"), url("../img/hero.jpg") type("image/jpeg"));
+  background-image: image-set(url("../img/hero.webp") type("image/webp"), url("../img/hero.jpg") type("image/jpeg"));
+  background-position:center; background-size:cover; background-repeat:no-repeat;
   animation: heroResolve 640ms cubic-bezier(.16,1,.3,1) 120ms both;
 }
 .hero-overlay{
@@ -445,3 +451,12 @@ blockquote footer a:hover{ color:var(--accent); }
   border:1px solid var(--line); padding:11px 18px; transition:border-color .18s ease, color .18s ease;
 }
 .area-links a:hover, .area-links a:focus-visible{ border-color:var(--accent); color:var(--accent-bright); }
+
+/* Hero: smaller source on phones. Must stay after the base .hero-placeholder
+   rule above, or it loses the cascade to it. */
+@media (max-width:900px){
+  .hero-placeholder{
+    background-image: -webkit-image-set(url("../img/hero-1200.webp") type("image/webp"), url("../img/hero.jpg") type("image/jpeg"));
+    background-image: image-set(url("../img/hero-1200.webp") type("image/webp"), url("../img/hero.jpg") type("image/jpeg"));
+  }
+}

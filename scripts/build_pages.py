@@ -33,7 +33,7 @@ BUSINESS = {
     "@type": "LocalBusiness",
     "@id": SITE + "/#business",
     "name": "Fun Snaps Photo Booth",
-    "image": SITE + "/assets/images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp",
+    "image": SITE + "/assets/img/hero.jpg",
     "logo": SITE + "/assets/img/logo-light.png",
     "url": SITE + "/",
     "telephone": "+1-647-375-0660",
@@ -195,7 +195,7 @@ def build(slug, meta, body):
 <meta property="og:title" content="{meta['title']}">
 <meta property="og:description" content="{meta['description']}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/assets/images/wp-content/uploads/2022/09/photo-booth-rental-fun.webp">
+<meta property="og:image" content="{SITE}/assets/img/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
 <script type="application/ld+json">
