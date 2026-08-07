@@ -1,0 +1,107 @@
+<!--META
+{
+  "title": "Contact Fun Snaps Photo Booth | Concord, Vaughan",
+  "description": "Contact Fun Snaps Photo Booth. Call 647.375.0660, email info@funsnaps.ca, or send your date and venue. Based in Concord, serving the GTA.",
+  "h1": "Contact us",
+  "lede": "Tell us the date and the venue and you will get a straight answer on availability and price. Call if you would rather talk it through.",
+  "breadcrumbs": [
+    [
+      "/",
+      "Home"
+    ]
+  ],
+  "crumb": "Contact",
+  "schema": [
+    {
+      "@type": "ContactPage",
+      "url": "https://www.funsnaps.ca/contact-us",
+      "name": "Contact Fun Snaps Photo Booth",
+      "mainEntity": {
+        "@id": "https://www.funsnaps.ca/#business"
+      }
+    }
+  ]
+}
+META-->
+  <article class="article">
+    <div class="wrap article-grid">
+
+      <div class="article-body">
+
+        <h2>Send us the details</h2>
+        <p>The two things that let us answer properly are the <strong>date</strong> and the <strong>venue</strong>. With those we can tell you whether we are free, which package fits, and whether the room has anything we need to plan around, like ceiling height for the 360 platform or a loading dock booking downtown.</p>
+
+        <form class="quote-form" id="quoteForm" method="post" action="/api/contact" novalidate style="margin-top:1.6em">
+          <p class="form-legend">Fields marked <span class="required-mark">*</span> are required</p>
+          <label class="field">
+            <span class="mono-tag">FULL NAME <span class="required-mark" aria-hidden="true">*</span></span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span class="mono-tag">EMAIL <span class="required-mark" aria-hidden="true">*</span></span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span class="mono-tag">PHONE <span class="required-mark" aria-hidden="true">*</span></span>
+            <input type="tel" name="phone" autocomplete="tel" required>
+          </label>
+          <label class="field">
+            <span class="mono-tag">EVENT DATE <span class="required-mark" aria-hidden="true">*</span></span>
+            <input type="date" name="event-date" required>
+          </label>
+          <label class="field">
+            <span class="mono-tag">EVENT TYPE</span>
+            <select name="event-type">
+              <option value="">Select event type</option>
+              <option value="wedding">Wedding</option>
+              <option value="corporate">Corporate event</option>
+              <option value="birthday">Birthday party</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="mono-tag">VENUE / CITY</span>
+            <input type="text" name="venue" placeholder="Paradise, Le Jardin, The Venetian&hellip;">
+          </label>
+          <label class="field">
+            <span class="mono-tag">MESSAGE</span>
+            <textarea name="message" rows="4" placeholder="Head count, hours, branding, anything we should know&hellip;"></textarea>
+          </label>
+          <p class="form-consent">By submitting this form you agree to share your information with Fun Snaps Photo Booth Rental and consent to receiving communications by email and/or SMS about your enquiry.</p>
+          <button type="submit" class="btn btn-solid btn-wide">Send Message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <h2>Or just call</h2>
+        <p>If it is easier to talk it through, ring <a href="tel:+16473750660">647.375.0660</a>. We answer between 7am and 11pm, seven days. For anything with paperwork attached, a certificate of insurance for a venue or artwork for a branded template, email <a href="mailto:info@funsnaps.ca">info@funsnaps.ca</a> so it is on record.</p>
+
+        <h2>Where we are</h2>
+        <p>160 Applewood Crescent, Concord, ON L4K 4E5. That is Vaughan, just off Highway 7, and it is a working shop rather than a showroom, so come by arrangement rather than unannounced.</p>
+        <p>We cover the whole GTA from there with no travel fees: <a href="/vaughan">Vaughan</a>, <a href="/toronto">Toronto</a>, <a href="/mississauga">Mississauga</a>, <a href="/oakville">Oakville</a>, <a href="/richmond-hill">Richmond Hill</a>, <a href="/markham">Markham</a> and the <a href="/york-region">York Region</a> towns to the north.</p>
+
+        <h2>Already know what you want?</h2>
+        <p>The <a href="/quote">quote tool</a> takes about a minute and gives you a total with add-ons included, rather than a promise that someone will call you back.</p>
+
+      </div>
+
+      <aside class="rail" aria-label="Contact details">
+        <div class="rail-card">
+          <h2>Direct</h2>
+          <dl class="rail-facts">
+            <dt>Phone</dt><dd><a href="tel:+16473750660">647.375.0660</a></dd>
+            <dt>Email</dt><dd><a href="mailto:info@funsnaps.ca">info@funsnaps.ca</a></dd>
+            <dt>Hours</dt><dd>Mon-Sun, 7am-11pm</dd>
+            <dt>Address</dt><dd>160 Applewood Crescent<br>Concord, ON L4K 4E5</dd>
+            <dt>Since</dt><dd>2011</dd>
+          </dl>
+        </div>
+        <div class="rail-card">
+          <h2>Want a number now?</h2>
+          <p>The quote tool prices your hours and add-ons in about a minute.</p>
+          <a href="/quote" class="btn btn-solid">Build Your Quote</a>
+        </div>
+      </aside>
+
+    </div>
+  </article>

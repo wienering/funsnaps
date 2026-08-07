@@ -59,7 +59,7 @@ export default async function handler(req, res) {
       addonsList.push(`Unlimited Prints - $${unlimitedPrintsPrice}`);
     }
     if (addons.glamBooth) {
-      addonsList.push('Glam Booth - $75');
+      addonsList.push('Glam Booth - Included at no charge');
     }
     if (addons.waitingTime > 0) {
       // Waiting time scales at $50 per hour

@@ -11,14 +11,52 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
   ],
   "redirects": [
-    {
-      "source": "/contact",
-      "destination": "/contact-us",
-      "permanent": true
-    }
+    { "source": "/contact", "destination": "/contact-us", "permanent": true },
+
+    { "source": "/vaughan-photo-booth-rental-prices", "destination": "/pricing", "permanent": true },
+
+    { "source": "/woodbridge", "destination": "/vaughan", "permanent": true },
+    { "source": "/concord", "destination": "/vaughan", "permanent": true },
+    { "source": "/maple", "destination": "/vaughan", "permanent": true },
+    { "source": "/thornhill", "destination": "/vaughan", "permanent": true },
+    { "source": "/kleinburg", "destination": "/york-region", "permanent": true },
+
+    { "source": "/etobicoke", "destination": "/toronto", "permanent": true },
+    { "source": "/north-york", "destination": "/toronto", "permanent": true },
+    { "source": "/scarborough", "destination": "/toronto", "permanent": true },
+    { "source": "/downtown-toronto", "destination": "/toronto", "permanent": true },
+
+    { "source": "/king-city", "destination": "/york-region", "permanent": true },
+    { "source": "/aurora", "destination": "/york-region", "permanent": true },
+    { "source": "/newmarket", "destination": "/york-region", "permanent": true },
+    { "source": "/nobleton", "destination": "/york-region", "permanent": true },
+    { "source": "/kettleby", "destination": "/york-region", "permanent": true },
+    { "source": "/stouffville", "destination": "/york-region", "permanent": true },
+
+    { "source": "/burlington", "destination": "/oakville", "permanent": true },
+    { "source": "/brampton", "destination": "/mississauga", "permanent": true },
+
+    { "source": "/glam", "destination": "/glam-booth", "permanent": true },
+    { "source": "/360", "destination": "/360-photo-booth", "permanent": true },
+    { "source": "/360-booth", "destination": "/360-photo-booth", "permanent": true },
+    { "source": "/corporate", "destination": "/corporate-photo-booth-rental", "permanent": true },
+    { "source": "/corporate-events", "destination": "/corporate-photo-booth-rental", "permanent": true },
+    { "source": "/prices", "destination": "/pricing", "permanent": true },
+    { "source": "/packages", "destination": "/pricing", "permanent": true },
+    { "source": "/faqs", "destination": "/faq", "permanent": true },
+    { "source": "/book", "destination": "/book-now", "permanent": true },
+    { "source": "/get-a-quote", "destination": "/quote", "permanent": true },
+    { "source": "/weddings", "destination": "/vaughan", "permanent": true },
+    { "source": "/vaughan/corporate-photo-booth", "destination": "/vaughan-corporate-photo-booth", "permanent": true }
   ],
   "rewrites": [
     {

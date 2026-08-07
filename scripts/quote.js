@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let unlimitedPrintsPrice = quoteData.addons.unlimitedPrints && quoteData.package.hours > 0 
             ? quoteData.package.hours * 60 
             : 0;
-        let glamBoothPrice = quoteData.addons.glamBooth ? 75 : 0;
+        let glamBoothPrice = 0; // Glam booth is included at no charge when the client wants it.
         // Waiting time scales at $50 per hour
         let waitingTimePrice = quoteData.addons.waitingTime > 0 
             ? quoteData.addons.waitingTime * 50 
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
             unlimitedPrintsPriceEl.textContent = unlimitedPrintsPrice > 0 ? `$${unlimitedPrintsPrice}` : '$0';
         }
         if (glamBoothPriceEl) {
-            glamBoothPriceEl.textContent = glamBoothPrice > 0 ? `$${glamBoothPrice}` : '$0';
+            glamBoothPriceEl.textContent = glamBoothPrice > 0 ? `$${glamBoothPrice}` : 'Included';
         }
         if (waitingTimePriceEl) {
             waitingTimePriceEl.textContent = waitingTimePrice > 0 ? `$${waitingTimePrice}` : '$0';
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 addonsHTML += `
                     <div class="summary-item">
                         <span class="summary-label">Glam Booth:</span>
-                        <span class="summary-value">$75</span>
+                        <span class="summary-value">Included</span>
                     </div>
                 `;
             }
