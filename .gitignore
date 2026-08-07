@@ -21,6 +21,9 @@ npm-debug.log*
 *.tmp
 *.temp
 
+# Local backups of site files
+backup/
+
 # Original HTML files (downloaded from site)
 index_original.html
 contact_original.html
