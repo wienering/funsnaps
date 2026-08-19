@@ -32,12 +32,7 @@ export default async function handler(req, res) {
       return res.status(200).json({ success: true, message: 'Quote sent successfully' });
     }
 
-    // Timing check — reject submissions faster than 2.5s
-    if (body.renderedAt && Date.now() - body.renderedAt < 2500) {
-      return res.status(200).json({ success: true, message: 'Quote sent successfully' });
-    }
-
-    // Turnstile verification
+    // Turnstile verification — always required before anything else
     if (process.env.TURNSTILE_SECRET_KEY) {
       const tsRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
         method: 'POST',
@@ -51,6 +46,11 @@ export default async function handler(req, res) {
       if (!tsData.success) {
         return res.status(400).json({ error: 'Verification failed' });
       }
+    }
+
+    // Timing check — reject submissions faster than 2.5s (after Turnstile so bots can't skip verification)
+    if (body.renderedAt && Date.now() - body.renderedAt < 2500) {
+      return res.status(200).json({ success: true, message: 'Quote sent successfully' });
     }
 
     const { contact, package: packageData, addons, total } = body;
