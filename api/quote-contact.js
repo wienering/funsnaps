@@ -26,6 +26,33 @@ export default async function handler(req, res) {
   try {
     // Parse the request body
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+
+    // Honeypot check — silent success, no processing
+    if (body.website) {
+      return res.status(200).json({ success: true, message: 'Contact info sent successfully' });
+    }
+
+    // Timing check — reject submissions faster than 2.5s
+    if (body.renderedAt && Date.now() - body.renderedAt < 2500) {
+      return res.status(200).json({ success: true, message: 'Contact info sent successfully' });
+    }
+
+    // Turnstile verification
+    if (process.env.TURNSTILE_SECRET_KEY) {
+      const tsRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          secret: process.env.TURNSTILE_SECRET_KEY,
+          response: body['cf-turnstile-response'] || '',
+        }),
+      });
+      const tsData = await tsRes.json();
+      if (!tsData.success) {
+        return res.status(400).json({ error: 'Verification failed' });
+      }
+    }
+
     const { fullName, email, phone, eventDate } = body;
 
     // Validate required fields
@@ -37,6 +64,11 @@ export default async function handler(req, res) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return res.status(400).json({ error: 'Invalid email format' });
+    }
+
+    // Validate phone format
+    if (!/^[\d\s()+-]{7,}$/.test(phone)) {
+      return res.status(400).json({ error: 'Invalid phone number' });
     }
 
     // Format the event date

@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=DM+Sans:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/site.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -393,6 +394,11 @@
           <span class="mono-tag">ANYTHING ELSE</span>
           <textarea name="message" rows="3" placeholder="Head count, hours, branding&hellip;"></textarea>
         </label>
+        <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+          <label for="website">Company Name</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAEVeQuLaZFdGrv0e"></div>
         <p class="form-consent">By submitting this form you agree to share your information with Fun Snaps Photo Booth Rental and consent to receiving communications by email and/or SMS about your enquiry.</p>
         <button type="submit" class="btn btn-solid btn-wide">Get a Quote</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>

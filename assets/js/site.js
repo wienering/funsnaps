@@ -170,6 +170,7 @@
   if (!form) return;
   var status = document.getElementById('formStatus');
   var PHONE = '647.375.0660';
+  var renderedAt = Date.now();
 
   function say(msg, state) {
     if (!status) return;
@@ -199,6 +200,8 @@
     if (venue) {
       data.message = (data.message ? data.message.trim() + '\n\n' : '') + 'Venue / city: ' + venue;
     }
+
+    data.renderedAt = renderedAt;
 
     button.disabled = true;
     button.textContent = 'Sending…';

@@ -1,5 +1,7 @@
 // Quote Tool JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+    var renderedAt = Date.now();
+
     // State management
     const quoteData = {
         contact: {},
@@ -74,6 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
+            // Collect spam protection fields from the step-1 form
+            var formEl = document.getElementById('contactForm');
+            var spamFields = {};
+            if (formEl) {
+                var fd = new FormData(formEl);
+                spamFields.website = fd.get('website') || '';
+                spamFields['cf-turnstile-response'] = fd.get('cf-turnstile-response') || '';
+            }
+            spamFields.renderedAt = renderedAt;
+
             // Send contact info to API (don't block on error, just log it)
             try {
                 await fetch('/api/quote-contact', {
@@ -81,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(quoteData.contact),
+                    body: JSON.stringify(Object.assign({}, quoteData.contact, spamFields)),
                 });
             } catch (error) {
                 // Silently fail - don't interrupt user flow
@@ -344,7 +356,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     contact: quoteData.contact,
                     package: quoteData.package,
                     addons: quoteData.addons,
-                    total: quoteData.total
+                    total: quoteData.total,
+                    website: spamFields.website,
+                    'cf-turnstile-response': spamFields['cf-turnstile-response'],
+                    renderedAt: renderedAt
                 };
 
                 // Send to API
