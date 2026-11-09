@@ -53,6 +53,8 @@
     { "source": "/prices", "destination": "/pricing", "permanent": true },
     { "source": "/packages", "destination": "/pricing", "permanent": true },
     { "source": "/faqs", "destination": "/faq", "permanent": true },
+    { "source": "/backdrop", "destination": "/backdrops", "permanent": true },
+    { "source": "/backdrop-rental", "destination": "/backdrops", "permanent": true },
     { "source": "/book", "destination": "/book-now", "permanent": true },
     { "source": "/get-a-quote", "destination": "/quote", "permanent": true },
     { "source": "/weddings", "destination": "/vaughan", "permanent": true },
